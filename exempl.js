@@ -1,8 +1,7 @@
-let num = 123;
-let sumChar = 0;
-while( num !== 0){
-  sumChar += num%10;
-  Math.trunc(num/10)
-}
-console.log()
+let num = 1000;
 
+
+function numberToStringInBase(number, base ) {
+  return number.toString(base)
+}
+console.log(numberToStringInBase(2,2))
