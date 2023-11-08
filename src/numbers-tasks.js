@@ -239,8 +239,8 @@ function toNumber(value, def) {
  *   -2 => -8
  *   0  => 0
  */
-function getCube(/* num */) {
-  throw new Error('Not implemented');
+function getCube(num) {
+  return num ** 3;
 }
 
 /**
@@ -256,8 +256,20 @@ function getCube(/* num */) {
  *   3  => 2
  *   10 => 55
  */
-function getFibonacciNumber(/* index */) {
-  throw new Error('Not implemented');
+function getFibonacciNumber(index) {
+  const FabonacciArr = [0, 1];
+  let fInd = 0;
+  let sInd = 1;
+  if (index > FabonacciArr.length - 1) {
+    while (FabonacciArr.length - 1 !== index) {
+      const FabonacciNum = FabonacciArr[fInd] + FabonacciArr[sInd];
+      FabonacciArr.push(FabonacciNum);
+      fInd += 1;
+      sInd += 1;
+    }
+    return FabonacciArr[index];
+  }
+  return FabonacciArr[index];
 }
 
 /**
