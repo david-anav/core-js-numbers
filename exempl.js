@@ -1,4 +1,4 @@
-function isNumber(number) {
-  return Number.isFinite(number)
+function getFloatOnString(str) {
+  return Number.parseFloat(str)
 }
-console.log(isNumber(NaN))
+console.log(getFloatOnString('4.567abcdefgh'))
