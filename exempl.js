@@ -1,4 +1,4 @@
-function getFloatOnString(str) {
-  return Number.parseFloat(str)
+function getHypotenuse(a, b) {
+  return Math.sqrt(a ** 2 + b ** 2)
 }
-console.log(getFloatOnString('4.567abcdefgh'))
+console.log(getHypotenuse(3,4))
