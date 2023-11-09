@@ -1,4 +1,10 @@
-function getHypotenuse(a, b) {
-  return Math.sqrt(a ** 2 + b ** 2)
+function getCountOfOddNumbers(number) {
+  let count = 0;
+  while(number !== 0){
+    number%2 !== 0 ? count+=1 : false;
+    number-=1;
+  }
+  return count;
 }
-console.log(getHypotenuse(3,4))
+
+console.log(getCountOfOddNumbers(5))
