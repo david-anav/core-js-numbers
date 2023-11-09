@@ -1,7 +1,4 @@
-let num = 1000;
-
-
-function numberToStringInBase(number, base ) {
-  return number.toString(base)
+function isNumber(number) {
+  return Number.isFinite(number)
 }
-console.log(numberToStringInBase(2,2))
+console.log(isNumber(NaN))
