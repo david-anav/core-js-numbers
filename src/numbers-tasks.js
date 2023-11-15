@@ -176,8 +176,8 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-function roundToPowerOfTen(/* num, pow */) {
-  throw new Error('Not implemented');
+function roundToPowerOfTen(num, pow) {
+  return Math.round(num / 10 ** pow) * 10 ** pow;
 }
 
 /**
@@ -633,17 +633,19 @@ function getHypotenuse(a, b) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(/* number */) {
-  // let count = 0;
-  // let num = number;
-  // while (num !== 0) {
-  //   if (num % 2 !== 0) {
-  //     count += 1;
-  //   }
-  //   num -= 1;
-  // }
-  // return count;
-  throw new Error('Not implemented');
+function getCountOfOddNumbers(number) {
+  let count = 0;
+  let num = number;
+  if (number < 0) {
+    num = Math.abs(number);
+  }
+  while (num !== 0) {
+    if (num % 2 !== 0) {
+      count += 1;
+    }
+    num -= 1;
+  }
+  return count;
 }
 
 module.exports = {
